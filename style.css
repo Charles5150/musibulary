@@ -1,0 +1,97 @@
+@font-face {
+  font-family: myFirstFont;
+  xsrc: url(VAN-H.TTF);
+  src: url(realbook-webfont.ttf);
+}
+
+html, body{
+  height:100%;
+  width:100%;
+  color: white;
+  background-color: black;
+  xfont-family: "Times New Roman", Times, serif;
+  xfont-family: "Lucida Console", "Courier New", monospace;
+  font-family: myFirstFont;
+  user-select: none;
+} 
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 50%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
+}
+
+#app {
+  xmax-width: 1280px;
+  xmargin: 0 auto;
+  xpadding: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20vh;
+}
+@keyframes example {
+  from {left: 500px;}
+  to {left: 0px;}
+}
+#origin {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+#interval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 33%;
+  xanimation-name: example;
+  xanimation-duration: 4s;
+  background-color: blue;
+}
+#destination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 33%;
+  background-color: red;
+}
+#stats {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+
+:root {
+  --animate-duration: 750ms;
+  --animate-delay: 0s;
+}
+
+
