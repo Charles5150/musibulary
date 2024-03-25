@@ -32,7 +32,7 @@ const originNotes = [
   { noteType: 5, pitchClass: 8, icon: 'Ab' },
   { noteType: 6, pitchClass: 10, icon: 'Bb' },
 ];
-
+/*
 const intervals = [
   { name: 'min. 9<sup>th</sup>', semitones: 1, distance: 1 },
   { name: 'maj. 9<sup>th</sup>', semitones: 2, distance: 1 },
@@ -49,6 +49,25 @@ const intervals = [
   { name: 'maj. 13<sup>th</sup>', semitones: 9, distance: 5 },
   { name: 'min. 7<sup>th</sup>', semitones: 10, distance: 6 },
   { name: 'maj. 7<sup>th</sup>', semitones: 11, distance: 6 },
+];
+*/
+
+const intervals = [
+  { name: 'b2<sup>nd</sup>', semitones: 1, distance: 1 },
+  { name: '2<sup>nd</sup>', semitones: 2, distance: 1 },
+  { name: '#2<sup>nd</sup>', semitones: 3, distance: 1 },
+  { name: 'b3<sup>rd</sup>', semitones: 3, distance: 2 },
+  { name: '3<sup>rd</sup>', semitones: 4, distance: 2 },
+  { name: 'b4<sup>th</sup>', semitones: 4, distance: 3 },
+  { name: '4<sup>th</sup>', semitones: 5, distance: 3 },
+  { name: '#4<sup>th</sup>', semitones: 6, distance: 3 },
+  { name: 'b5<sup>th</sup>', semitones: 6, distance: 4 },
+  { name: '5<sup>th</sup>', semitones: 7, distance: 4 },
+  { name: '#5<sup>th</sup>', semitones: 8, distance: 4 },
+  { name: 'b6<sup>th</sup>', semitones: 8, distance: 5 },
+  { name: '6<sup>th</sup>', semitones: 9, distance: 5 },
+  { name: 'b7<sup>th</sup>', semitones: 10, distance: 6 },
+  { name: '7<sup>th</sup>', semitones: 11, distance: 6 },
 ];
 
 const resultCombination = [];
