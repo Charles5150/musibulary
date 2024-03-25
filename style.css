@@ -1,98 +1,154 @@
 @font-face {
-  font-family: myFirstFont;
-  xsrc: url(VAN-H.TTF);
-  src: url(realbook-webfont.ttf);
+    font-family: myFirstFont;
+    xsrc: url(VAN-H.TTF);
+    src: url(realbook-webfont.ttf);
 }
 
-html, body{
-  height:100%;
-  width:100%;
-  color: white;
-  background-color: black;
-  xfont-family: "Times New Roman", Times, serif;
-  xfont-family: "Lucida Console", "Courier New", monospace;
-  font-family: myFirstFont;
-  user-select: none;
-} 
-sub, sup {
-  /* Specified in % so that the sup/sup is the
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: black;
+    xfont-family: "Times New Roman", Times, serif;
+    xfont-family: "Lucida Console", "Courier New", monospace;
+    font-family: myFirstFont;
+    user-select: none;
+}
+sub,
+sup {
+    /* Specified in % so that the sup/sup is the
      right size relative to the surrounding text */
-  font-size: 50%;
+    font-size: 50%;
 
-  /* Zero out the line-height so that it doesn't
+    /* Zero out the line-height so that it doesn't
      interfere with the positioning that follows */
-  line-height: 0;
+    line-height: 0;
 
-  /* Where the magic happens: makes all browsers position
+    /* Where the magic happens: makes all browsers position
      the sup/sup properly, relative to the surrounding text */
-  position: relative;
+    position: relative;
 
-  /* Note that if you're using Eric Meyer's reset.css, this
+    /* Note that if you're using Eric Meyer's reset.css, this
      is already set and you can remove this rule */
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 sup {
-  /* Move the superscripted text up */
-  top: -0.5em;
+    /* Move the superscripted text up */
+    top: -0.5em;
 }
 
 sub {
-  /* Move the subscripted text down, but only
+    /* Move the subscripted text down, but only
      half as far down as the superscript moved up */
-  bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 #app {
-  xmax-width: 1280px;
-  xmargin: 0 auto;
-  xpadding: 2rem;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  font-size: 20vh;
+    xmax-width: 1280px;
+    xmargin: 0 auto;
+    xpadding: 2rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20vh;
 }
 @keyframes example {
-  from {left: 500px;}
-  to {left: 0px;}
+    from {
+        left: 500px;
+    }
+    to {
+        left: 0px;
+    }
 }
 #origin {
-  width: 100%;
-  height: 33%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: green;
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
 }
 #interval {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 33%;
-  xanimation-name: example;
-  xanimation-duration: 4s;
-  background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    xanimation-name: example;
+    xanimation-duration: 4s;
+    background-color: blue;
 }
 #destination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 33%;
-  background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 33%;
+    background-color: red;
 }
 #stats {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 10;
-  font-size: 10vh;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    font-size: 10vh;
 }
-
 
 :root {
-  --animate-duration: 750ms;
-  --animate-delay: 0s;
+    --animate-duration: 750ms;
+    --animate-delay: 0s;
 }
 
-
+.piano-keys {
+    display: flex;
+    list-style: none;
+    xmargin-top: 40px;
+}
+.piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+.piano-keys .black {
+    z-index: 2;
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333, #000);
+}
+.piano-keys .black.active {
+    xbox-shadow: inset -5px -10px 10px rgba(255, 255, 255, 0.1);
+    xbackground: linear-gradient(to bottom, #000, #434343);
+    background: linear-gradient(to bottom, #000, #1234ff);
+}
+.piano-keys .white {
+    height: 230px;
+    width: 70px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    xbackground: linear-gradient(#fff 96%, #eee 4%);
+    background: linear-gradient(#ffffff, #eeeeee);
+}
+.piano-keys .white.active {
+    xbox-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    xbackground: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    background: linear-gradient(to bottom, #ffffff, #1234ff);
+}
+.piano-keys .key span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    color: #a2a2a2;
+    font-size: 1.13rem;
+    text-align: center;
+}
+.piano-keys .key.hide span {
+    display: none;
+}
+.piano-keys .black span {
+    bottom: 13px;
+    color: #888888;
+}
